@@ -10,11 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.FacebookRequestError;
+import com.facebook.Request;
+import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
+import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import com.wattabyte.bindaasteam.navigationdrawer.NavigationDrawerActivity;
+import com.wattabyte.bindaasteam.util.BindaasUtil;
 
 public class MainFragment extends Fragment {
 
@@ -47,11 +52,14 @@ public class MainFragment extends Fragment {
 		
 		if (state.isOpened() ) {
 			
-			
+			if (session != null && session.isOpened()) {
+		        // Get the user's data.
+		        makeMeRequest(session);
+		    }
 
 			Intent intent = new Intent(MainActivity.getInstance() , NavigationDrawerActivity.class);
-//			
 			startActivity(intent);
+			MainActivity.getInstance().finish();
 		} else if (state.isClosed()) {
 			Log.i(TAG, "Logged out...");
 		}
@@ -104,6 +112,35 @@ public class MainFragment extends Fragment {
 		uiHelper.onSaveInstanceState(outState);
 	}
 	
+	private void makeMeRequest(final Session session) {
+	    // Make an API call to get user data and define a 
+	    // new callback to handle the response.
+	    Request request = Request.newMeRequest(session, 
+	            new Request.GraphUserCallback() {
+	        @Override
+	        public void onCompleted(GraphUser user, Response response) {
+	            // If the response is successful
+	            if (session == Session.getActiveSession()) {
+	                if (user != null) {
+	                   	        BindaasUtil.setFbName(user.getName());
+	                   	        BindaasUtil.setFbId(user.getId());
+	                   	    
+	                }
+	            }
+	            if (response.getError() != null) {
+	            	 FacebookRequestError error = response.getError();
+	                 if (error != null) {
+	                      Log.d(UN , error.getErrorMessage()); 
+	                 }
+	            }
+	        }
+
+			
+
+			
+	    });
+	    request.executeAsync();
+	} 
 	
 	
 	

@@ -60,7 +60,7 @@ public boolean onOptionsItemSelected(MenuItem item) {
 	    startActivity(new Intent(getApplicationContext(), MainActivity.class));
 	    // make sure the user can not access the page after he/she is logged out
 	    // clear the activity stack
-
+	    finish();
 		return true;
 	}
     return super.onOptionsItemSelected(item);

@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout      
-xmlns:android="http://schemas.android.com/apk/res/android" 
- android:layout_width="match_parent" 
-android:layout_height="match_parent" >
-
+<RelativeLayout xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentTop="true">
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/fbUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="83dp"
-        android:text="Profile"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-    
+
+    <com.facebook.widget.ProfilePictureView
+        android:id="@+id/selection_profile_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        facebook:preset_size="normal" />
+    </LinearLayout>
+
 </RelativeLayout>
