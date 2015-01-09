@@ -4,6 +4,7 @@ public class BindaasUtil {
 
 	private static String fbName;
 	private static String fbId;
+	private static String playerName;
 
 	public BindaasUtil() {
 
@@ -23,6 +24,14 @@ public class BindaasUtil {
 
 	public static void setFbId(String fbBirthDate) {
 		BindaasUtil.fbId = fbBirthDate;
+	}
+
+	public static String getPlayerName() {
+		return playerName;
+	}
+
+	public static void setPlayerName(String playerName) {
+		BindaasUtil.playerName = playerName;
 	}
 
 

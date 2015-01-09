@@ -10,6 +10,10 @@
     <string name="app_contact_name">Bindaas Contacts</string>
     <string name="action_navigation">Bindaas Navigation</string>
     <color name="blue">#0000FF</color>
+    <color name="red">#FF00FF</color>
+    <string name="playerName">Bindaas Name</string>
+    <string name="bindaasName">Show Name</string>
+    <string name="playerHint">set your name in bindaas team</string>
     
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>
