@@ -58,6 +58,8 @@ public class ProfileFragment extends Fragment {
 				
 				Toast.makeText(NavigationDrawerActivity.getInstance(), BindaasUtil.getPlayerName(),
 						Toast.LENGTH_SHORT).show();
+				bindaasButton.setVisibility(View.VISIBLE);
+				bindaasButton2.setVisibility(View.INVISIBLE);
 				
 			}
 		});
