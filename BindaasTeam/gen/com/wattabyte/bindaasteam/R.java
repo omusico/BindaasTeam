@@ -1931,19 +1931,20 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0b002a;
         public static final int action_bar_title=0x7f0b0029;
         public static final int action_context_bar=0x7f0b003d;
-        public static final int action_logout=0x7f0b0073;
+        public static final int action_logout=0x7f0b0074;
         public static final int action_menu_divider=0x7f0b0005;
         public static final int action_menu_presenter=0x7f0b0006;
         public static final int action_mode_bar=0x7f0b0039;
         public static final int action_mode_bar_stub=0x7f0b0038;
         public static final int action_mode_close_button=0x7f0b002b;
-        public static final int action_settings=0x7f0b0074;
+        public static final int action_settings=0x7f0b0075;
         public static final int activity_chooser_view_content=0x7f0b002c;
         public static final int add_friends=0x7f0b006c;
         public static final int always=0x7f0b001f;
         public static final int authButton=0x7f0b004a;
         public static final int beginning=0x7f0b0026;
         public static final int bindaasButton=0x7f0b0072;
+        public static final int bindaasButton2=0x7f0b0073;
         public static final int bindaasName=0x7f0b0071;
         public static final int bottom=0x7f0b000f;
         public static final int box_count=0x7f0b000c;
@@ -2187,6 +2188,7 @@ containing a value of this type.
         public static final int app_contact_name=0x7f070033;
         public static final int app_name=0x7f07002d;
         public static final int bindaasName=0x7f070036;
+        public static final int bindaasName2=0x7f070037;
         public static final int com_facebook_choose_friends=0x7f070011;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f070000;
         public static final int com_facebook_image_download_unknown_error=0x7f07001c;
@@ -2216,11 +2218,11 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f07000a;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f07000b;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f07000c;
-        public static final int drawer_close=0x7f070039;
-        public static final int drawer_open=0x7f070038;
+        public static final int drawer_close=0x7f07003a;
+        public static final int drawer_open=0x7f070039;
         public static final int facebook_app_id=0x7f070031;
         public static final int hello_world=0x7f07002e;
-        public static final int playerHint=0x7f070037;
+        public static final int playerHint=0x7f070038;
         public static final int playerName=0x7f070035;
     }
     public static final class style {

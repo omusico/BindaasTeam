@@ -12,8 +12,9 @@
     <color name="blue">#0000FF</color>
     <color name="red">#FF00FF</color>
     <string name="playerName">Bindaas Name</string>
-    <string name="bindaasName">Show Name</string>
-    <string name="playerHint">set your name in bindaas team</string>
+    <string name="bindaasName">Set Bindaas Name</string>
+     <string name="bindaasName2">Show Bindaas Name</string>
+    <string name="playerHint">set your name for bindaas team visibility</string>
     
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>

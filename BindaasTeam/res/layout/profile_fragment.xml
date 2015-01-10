@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
-            facebook:preset_size="normal" />
+            facebook:preset_size="small" />
     </LinearLayout>
 
     <LinearLayout
@@ -51,6 +51,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bindaasName"/>
+         <Button 
+            android:id="@+id/bindaasButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="@string/bindaasName2"/>
         
     </LinearLayout>
 

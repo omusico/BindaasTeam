@@ -21,7 +21,7 @@ public class ProfileFragment extends Fragment {
 	TextView fbUserName;
 	EditText bindaasName;
 	ProfilePictureView profilePictureView;
-	Button bindaasButton;
+	Button bindaasButton , bindaasButton2;	
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +33,7 @@ public class ProfileFragment extends Fragment {
 		fbUserName = (TextView) root.findViewById(R.id.fbUserName);
 		bindaasName = (EditText) root.findViewById(R.id.bindaasName);
 		bindaasButton = (Button) root.findViewById(R.id.bindaasButton);
+		bindaasButton2 = (Button) root.findViewById(R.id.bindaasButton2);
 		
 		
 		profilePictureView.setProfileId(BindaasUtil.getFbId());
@@ -44,7 +45,19 @@ public class ProfileFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				BindaasUtil.setPlayerName(bindaasName.getText().toString());
-				Toast.makeText(NavigationDrawerActivity.getInstance(), BindaasUtil.getPlayerName(),Toast.LENGTH_SHORT).show();
+				bindaasButton2.setVisibility(View.VISIBLE);
+				bindaasButton.setVisibility(View.INVISIBLE);
+			}
+			
+		});
+		
+		bindaasButton2.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				Toast.makeText(NavigationDrawerActivity.getInstance(), BindaasUtil.getPlayerName(),
+						Toast.LENGTH_SHORT).show();
 				
 			}
 		});
