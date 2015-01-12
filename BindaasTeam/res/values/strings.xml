@@ -9,16 +9,18 @@
     <string name="action_friends">Add</string>
     <string name="app_contact_name">Bindaas Contacts</string>
     <string name="action_navigation">Bindaas Navigation</string>
+    <string name="bindaas_welcome">Welocme to Bindaas Team </string>
+    <string name="bindaas_welcome2">Start your game with Profile </string>
     <color name="blue">#0000FF</color>
-    <color name="red">#FF00FF</color>
+    <color name="red">#FF0000</color>
+
     <string name="playerName">Bindaas Name</string>
     <string name="bindaasName">Set Bindaas Name</string>
-     <string name="bindaasName2">Show Bindaas Name</string>
+    <string name="bindaasName2">Show Bindaas Name</string>
     <string name="playerHint">set your name for bindaas team visibility</string>
-    
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>
-    
+
     <string-array name="menu">
         <item>Profile</item>
         <item>Friends</item>
@@ -27,6 +29,5 @@
         <item>Notification</item>
         <item>How to play</item>
     </string-array>
-    
 
 </resources>

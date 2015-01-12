@@ -23,22 +23,22 @@ import com.wattabyte.bindaasteam.R;
 
 public class NavigationDrawerActivity extends ActionBarActivity implements
 OnItemClickListener{
-	
+
 	public static NavigationDrawerActivity instance;
-	
+
 	public static NavigationDrawerActivity getInstance(){
 		return instance;
 	}
-	
-private DrawerLayout drawerLayout;
-	
+
+	private DrawerLayout drawerLayout;
+
 
 
 	private ListView listView1;
 
 
 	private ActionBarDrawerToggle drawerListener;
-	
+
 
 	private String[] titles ;
 
@@ -46,6 +46,10 @@ private DrawerLayout drawerLayout;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		Fragment fragment = new ProfileFragment();
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
+
 		instance = this;
 		setContentView(R.layout.activity_navigation);
 
@@ -56,14 +60,14 @@ private DrawerLayout drawerLayout;
 				R.string.drawer_close) {
 			@Override
 			public void onDrawerClosed(View drawerView) {
-				// TODO Auto-generated method stub
+
 				Toast.makeText(NavigationDrawerActivity.this, "on drawer close",
 						Toast.LENGTH_SHORT).show();
 			}
 
 			@Override
 			public void onDrawerOpened(View drawerView) {
-				// TODO Auto-generated method stub
+
 				Toast.makeText(NavigationDrawerActivity.this, "on drawer open",
 						Toast.LENGTH_SHORT).show();
 			}
@@ -107,16 +111,16 @@ private DrawerLayout drawerLayout;
 		int id = item.getItemId();
 		if (id == R.id.action_logout) {
 			// find the active session which can only be facebook in my app
-		    Session session = Session.getActiveSession();
-		    // run the closeAndClearTokenInformation which does the following
-		    // DOCS : Closes the local in-memory Session object and clears any persistent 
-		    // cache related to the Session.
-		    session.closeAndClearTokenInformation();
-		    // return the user to the login screen
-		    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-		    // make sure the user can not access the page after he/she is logged out
-		    // clear the activity stack
-		    finish();
+			Session session = Session.getActiveSession();
+			// run the closeAndClearTokenInformation which does the following
+			// DOCS : Closes the local in-memory Session object and clears any persistent 
+			// cache related to the Session.
+			session.closeAndClearTokenInformation();
+			// return the user to the login screen
+			startActivity(new Intent(getApplicationContext(), MainActivity.class));
+			// make sure the user can not access the page after he/she is logged out
+			// clear the activity stack
+			finish();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -177,7 +181,7 @@ private DrawerLayout drawerLayout;
 
 		getSupportActionBar().setTitle(title);
 	}
-	
-	
+
+
 
 }
