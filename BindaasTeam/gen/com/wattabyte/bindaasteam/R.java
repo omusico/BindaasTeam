@@ -1932,24 +1932,25 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0b002a;
         public static final int action_bar_title=0x7f0b0029;
         public static final int action_context_bar=0x7f0b003d;
-        public static final int action_logout=0x7f0b0074;
+        public static final int action_logout=0x7f0b0080;
         public static final int action_menu_divider=0x7f0b0005;
         public static final int action_menu_presenter=0x7f0b0006;
         public static final int action_mode_bar=0x7f0b0039;
         public static final int action_mode_bar_stub=0x7f0b0038;
         public static final int action_mode_close_button=0x7f0b002b;
-        public static final int action_settings=0x7f0b0075;
+        public static final int action_settings=0x7f0b0081;
         public static final int activity_chooser_view_content=0x7f0b002c;
         public static final int add_friends=0x7f0b006c;
         public static final int always=0x7f0b001f;
         public static final int authButton=0x7f0b004a;
         public static final int beginning=0x7f0b0026;
-        public static final int bindaasButton=0x7f0b0072;
-        public static final int bindaasButton2=0x7f0b0073;
-        public static final int bindaasName=0x7f0b0071;
+        public static final int bindaasButton=0x7f0b0076;
+        public static final int bindaasButton2=0x7f0b0077;
+        public static final int bindaasName=0x7f0b0075;
         public static final int bottom=0x7f0b000f;
         public static final int box_count=0x7f0b000c;
         public static final int button=0x7f0b000d;
+        public static final int button1=0x7f0b007a;
         public static final int center=0x7f0b0012;
         public static final int checkbox=0x7f0b0034;
         public static final int collapseActionView=0x7f0b0020;
@@ -1985,11 +1986,13 @@ containing a value of this type.
         public static final int drawerLayout=0x7f0b004b;
         public static final int drawerListView=0x7f0b004d;
         public static final int dropdown=0x7f0b0025;
+        public static final int editText1=0x7f0b007f;
         public static final int edit_query=0x7f0b003e;
         public static final int end=0x7f0b0027;
         public static final int expand_activities_button=0x7f0b002d;
         public static final int expanded_menu=0x7f0b0033;
-        public static final int fbUserName=0x7f0b006e;
+        public static final int fbUserName=0x7f0b0072;
+        public static final int gold=0x7f0b0070;
         public static final int home=0x7f0b0000;
         public static final int homeAsUp=0x7f0b0019;
         public static final int icon=0x7f0b0031;
@@ -1997,14 +2000,17 @@ containing a value of this type.
         public static final int image=0x7f0b002e;
         public static final int imageView1=0x7f0b006a;
         public static final int inline=0x7f0b0010;
+        public static final int label=0x7f0b006d;
         public static final int large=0x7f0b0009;
-        public static final int layout1=0x7f0b006d;
-        public static final int layout2=0x7f0b0070;
+        public static final int layout1=0x7f0b0071;
+        public static final int layout2=0x7f0b0074;
+        public static final int league_list=0x7f0b0078;
         public static final int left=0x7f0b0013;
         public static final int listMode=0x7f0b0016;
         public static final int list_item=0x7f0b0030;
         public static final int mainContent=0x7f0b004c;
         public static final int middle=0x7f0b0028;
+        public static final int name=0x7f0b006e;
         public static final int never=0x7f0b0022;
         public static final int none=0x7f0b001a;
         public static final int normal=0x7f0b000a;
@@ -2013,6 +2019,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0b0008;
         public static final int radio=0x7f0b0036;
         public static final int right=0x7f0b0014;
+        public static final int role=0x7f0b006f;
         public static final int search_badge=0x7f0b0040;
         public static final int search_bar=0x7f0b003f;
         public static final int search_button=0x7f0b0041;
@@ -2023,7 +2030,7 @@ containing a value of this type.
         public static final int search_plate=0x7f0b0044;
         public static final int search_src_text=0x7f0b0045;
         public static final int search_voice_btn=0x7f0b0049;
-        public static final int selection_profile_pic=0x7f0b006f;
+        public static final int selection_profile_pic=0x7f0b0073;
         public static final int shortcut=0x7f0b0035;
         public static final int showCustom=0x7f0b001b;
         public static final int showHome=0x7f0b001c;
@@ -2034,6 +2041,11 @@ containing a value of this type.
         public static final int submit_area=0x7f0b0047;
         public static final int tabMode=0x7f0b0017;
         public static final int textView1=0x7f0b006b;
+        public static final int textView2=0x7f0b0079;
+        public static final int textView3=0x7f0b007b;
+        public static final int textView4=0x7f0b007c;
+        public static final int textView5=0x7f0b007d;
+        public static final int textView6=0x7f0b007e;
         public static final int title=0x7f0b0032;
         public static final int top=0x7f0b0011;
         public static final int tvName=0x7f0b0068;
@@ -2116,11 +2128,16 @@ containing a value of this type.
         public static final int friends_fragment=0x7f03002c;
         public static final int groups_fragment=0x7f03002d;
         public static final int how_to_play=0x7f03002e;
-        public static final int list_item=0x7f03002f;
-        public static final int notification_fragment=0x7f030030;
-        public static final int profile_fragment=0x7f030031;
-        public static final int support_simple_spinner_dropdown_item=0x7f030032;
-        public static final int team_management_fragment=0x7f030033;
+        public static final int league_list=0x7f03002f;
+        public static final int list_item=0x7f030030;
+        public static final int notification_fragment=0x7f030031;
+        public static final int player_list=0x7f030032;
+        public static final int profile_fragment=0x7f030033;
+        public static final int select_league=0x7f030034;
+        public static final int select_player=0x7f030035;
+        public static final int support_simple_spinner_dropdown_item=0x7f030036;
+        public static final int team_management_fragment=0x7f030037;
+        public static final int team_name=0x7f030038;
     }
     public static final class menu {
         public static final int fblogout=0x7f0d0000;
@@ -2187,6 +2204,7 @@ containing a value of this type.
         public static final int action_logout=0x7f070030;
         public static final int action_navigation=0x7f070034;
         public static final int action_settings=0x7f07002f;
+        public static final int add=0x7f07003d;
         public static final int app_contact_name=0x7f070033;
         public static final int app_name=0x7f07002d;
         public static final int bindaasName=0x7f070038;
@@ -2228,6 +2246,7 @@ containing a value of this type.
         public static final int hello_world=0x7f07002e;
         public static final int playerHint=0x7f07003a;
         public static final int playerName=0x7f070037;
+        public static final int team_name=0x7f07003e;
     }
     public static final class style {
         /** 

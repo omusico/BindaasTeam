@@ -29,5 +29,7 @@
         <item>Notification</item>
         <item>How to play</item>
     </string-array>
+    <string name="add">+</string>
+    <string name="team_name">Name Your Team</string>
 
 </resources>
