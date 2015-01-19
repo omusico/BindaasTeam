@@ -124,6 +124,9 @@ public class MainFragment extends Fragment {
 	                if (user != null) {
 	                   	        BindaasUtil.setFbName(user.getName());
 	                   	        BindaasUtil.setFbId(user.getId());
+//	                   	       Log.i(UN, user.getLocation().toString());
+	                   	        
+	                   	        
 	                   	    
 	                }
 	            }

@@ -2125,19 +2125,20 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment=0x7f030029;
         public static final int contact_list_entry=0x7f03002a;
         public static final int custom_row=0x7f03002b;
-        public static final int friends_fragment=0x7f03002c;
-        public static final int groups_fragment=0x7f03002d;
-        public static final int how_to_play=0x7f03002e;
-        public static final int league_list=0x7f03002f;
-        public static final int list_item=0x7f030030;
-        public static final int notification_fragment=0x7f030031;
-        public static final int player_list=0x7f030032;
-        public static final int profile_fragment=0x7f030033;
-        public static final int select_league=0x7f030034;
-        public static final int select_player=0x7f030035;
-        public static final int support_simple_spinner_dropdown_item=0x7f030036;
-        public static final int team_management_fragment=0x7f030037;
-        public static final int team_name=0x7f030038;
+        public static final int first_main_activity=0x7f03002c;
+        public static final int friends_fragment=0x7f03002d;
+        public static final int groups_fragment=0x7f03002e;
+        public static final int how_to_play=0x7f03002f;
+        public static final int league_list=0x7f030030;
+        public static final int list_item=0x7f030031;
+        public static final int notification_fragment=0x7f030032;
+        public static final int player_list=0x7f030033;
+        public static final int profile_fragment=0x7f030034;
+        public static final int select_league=0x7f030035;
+        public static final int select_player=0x7f030036;
+        public static final int support_simple_spinner_dropdown_item=0x7f030037;
+        public static final int team_management_fragment=0x7f030038;
+        public static final int team_name=0x7f030039;
     }
     public static final class menu {
         public static final int fblogout=0x7f0d0000;
