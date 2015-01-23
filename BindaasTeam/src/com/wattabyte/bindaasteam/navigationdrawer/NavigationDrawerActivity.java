@@ -25,6 +25,7 @@ public class NavigationDrawerActivity extends ActionBarActivity implements
 OnItemClickListener{
 
 	public static NavigationDrawerActivity instance;
+	public static String fragmentName = "ProfileFragment()";
 
 	public static NavigationDrawerActivity getInstance(){
 		return instance;
@@ -50,6 +51,8 @@ OnItemClickListener{
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
+		
+		
 		instance = this;
 		setContentView(R.layout.activity_navigation);
 
@@ -182,6 +185,8 @@ OnItemClickListener{
 		getSupportActionBar().setTitle(title);
 	}
 
+	
+	
 
 
 }

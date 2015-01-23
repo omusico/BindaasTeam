@@ -1,17 +1,18 @@
 package com.wattabyte.bindaasteam;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.facebook.AppEventsLogger;
 
 
-public class MainActivity extends FragmentActivity{
+public class MainActivity extends ActionBarActivity{
 
-	private MainFragment mainFragment;
-
+	
 	public static MainActivity instance;
 
 	public static MainActivity getInstance(){
@@ -22,18 +23,11 @@ public class MainActivity extends FragmentActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
-		if (savedInstanceState == null) {
-			// Add the fragment on initial activity setup
-			mainFragment = new MainFragment();
-			getSupportFragmentManager()
-			.beginTransaction()
-			.add(android.R.id.content, mainFragment)
-			.commit();
-		} else {
-			// Or set the fragment from restored state info
-			mainFragment = (MainFragment) getSupportFragmentManager()
-					.findFragmentById(android.R.id.content);
-		}
+		setContentView(R.layout.first_main_activity);
+		Fragment fragment = new MainFragment();
+		FragmentManager fragmentManager = getSupportFragmentManager();
+		fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
+		
 	}
 
 

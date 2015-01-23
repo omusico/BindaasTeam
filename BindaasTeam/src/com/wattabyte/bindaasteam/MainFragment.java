@@ -30,7 +30,7 @@ public class MainFragment extends Fragment {
 	
 		private Session.StatusCallback callback = new Session.StatusCallback() {
 		@Override
-		public void call( Session session, SessionState state, Exception exception) {
+		public void call( final Session session,final SessionState state, Exception exception) {
 			onSessionStateChange(session, state, exception);
 		}
 	};
@@ -124,9 +124,6 @@ public class MainFragment extends Fragment {
 	                if (user != null) {
 	                   	        BindaasUtil.setFbName(user.getName());
 	                   	        BindaasUtil.setFbId(user.getId());
-//	                   	       Log.i(UN, user.getLocation().toString());
-	                   	        
-	                   	        
 	                   	    
 	                }
 	            }
