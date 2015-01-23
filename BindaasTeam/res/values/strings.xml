@@ -17,8 +17,8 @@
     <string name="playerHint">set your name for bindaas team visibility</string>
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>
-    
-     <color name="red">#FF0000</color>
+
+    <color name="red">#FF0000</color>
     <color name="blue">#0000FF</color>
 
     <string-array name="menu">
@@ -35,6 +35,9 @@
     <string name="mailId">Email-ID</string>
     <string name="location">Location</string>
     <string name="next">Next</string>
-     <string name="done">Done</string>
+    <string name="done">Done</string>
+    <string name="playerGold">Gold</string>
+    <string name="goldValue">110</string>
+     <string name="playerRole">110</string>
 
 </resources>

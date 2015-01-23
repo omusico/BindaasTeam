@@ -44,6 +44,7 @@
         </activity>
         <activity android:name="com.wattabyte.bindaasteam.teammanagement.TeamName" >
         </activity>
+        <activity android:name="com.wattabyte.bindaasteam.teammanagement.Players"></activity>
        <!-- This for Facebook Services-->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

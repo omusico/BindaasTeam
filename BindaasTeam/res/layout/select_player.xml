@@ -3,39 +3,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" >
 
+       
+         <TextView
+             android:id="@+id/gCount" 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:paddingRight="20dp"
+             android:text="@string/goldValue" 
+             android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </RelativeLayout>
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/pName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:paddingLeft="20dp"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/textView2"
+            android:text="@string/playerName" />
+        
+         <TextView
+             android:id="@+id/pRole"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView1"
-            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignBaseline="@+id/pName"
             android:layout_alignParentRight="true"
             android:paddingRight="20dp"
-            android:text="TextView" />
-    </RelativeLayout>
+            android:text="@string/playerRole" />
 
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="455dp"
-        android:layout_weight="0.39"
-         >
-    </ListView>
+         <TextView
+             android:id="@+id/pGold" 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBaseline="@+id/pRole"
+             android:layout_alignBottom="@+id/pRole"
+             android:layout_centerHorizontal="true"
+             android:paddingRight="20dp"
+             android:text="@string/playerGold" />
+
+    </RelativeLayout>
+    
+     <ListView
+         android:id="@android:id/list"
+         android:layout_width="match_parent"
+         android:layout_height="455dp"
+         android:layout_weight="0.39" >
+     </ListView>
 
     <RelativeLayout
         android:layout_width="match_parent"

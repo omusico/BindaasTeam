@@ -5,7 +5,9 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseCrashReporting;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.wattabyte.bindaasteam.util.Names;
 
 public class BindaasApplication extends Application {
 	
@@ -15,8 +17,10 @@ public class BindaasApplication extends Application {
 	 @Override
 	  public void onCreate() {
 	    super.onCreate();
-
-	   ParseCrashReporting.enable(this);
+	    ParseObject.registerSubclass(Names.class);
+	    Parse.enableLocalDatastore(getApplicationContext());
+	    // Initialize Crash Reporting.
+	    ParseCrashReporting.enable(this);
 
 	    // Add your initialization code here
 	    Parse.initialize(this, YOUR_APPLICATION_ID, YOUR_CLIENT_KEY);
