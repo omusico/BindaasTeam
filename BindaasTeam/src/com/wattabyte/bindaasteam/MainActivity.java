@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -23,11 +24,15 @@ public class MainActivity extends ActionBarActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
+		Log.d(BindaasApplication.VINAY, "Main activity on create");
 		setContentView(R.layout.first_main_activity);
+		Log.d(BindaasApplication.VINAY, "content view setting");
 		Fragment fragment = new MainFragment();
+		Log.d(BindaasApplication.VINAY, "Setting New fragment");
 		FragmentManager fragmentManager = getSupportFragmentManager();
+		Log.d(BindaasApplication.VINAY, "Set fragment Manager");
 		fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
-		
+		Log.d(BindaasApplication.VINAY, "replace fragment");
 	}
 
 
