@@ -1,6 +1,5 @@
 package com.wattabyte.bindaasteam.navigationdrawer;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -17,8 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.facebook.Session;
-import com.wattabyte.bindaasteam.MainActivity;
 import com.wattabyte.bindaasteam.R;
 
 public class NavigationDrawerActivity extends ActionBarActivity implements
@@ -111,21 +108,7 @@ OnItemClickListener{
 			return true;
 		}
 
-		int id = item.getItemId();
-		if (id == R.id.action_logout) {
-			// find the active session which can only be facebook in my app
-			Session session = Session.getActiveSession();
-			// run the closeAndClearTokenInformation which does the following
-			// DOCS : Closes the local in-memory Session object and clears any persistent 
-			// cache related to the Session.
-			session.closeAndClearTokenInformation();
-			// return the user to the login screen
-			startActivity(new Intent(getApplicationContext(), MainActivity.class));
-			// make sure the user can not access the page after he/she is logged out
-			// clear the activity stack
-			finish();
-			return true;
-		}
+		
 		return super.onOptionsItemSelected(item);
 
 	}

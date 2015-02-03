@@ -2,7 +2,6 @@ package com.wattabyte.bindaasteam.contacts;
 
 import java.util.ArrayList;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -12,8 +11,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.facebook.Session;
-import com.wattabyte.bindaasteam.MainActivity;
 import com.wattabyte.bindaasteam.R;
 
 
@@ -48,21 +45,8 @@ public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
     // automatically handle clicks on the Home/Up button, so long
     // as you specify a parent activity in AndroidManifest.xml.
-    int id = item.getItemId();
-    if (id == R.id.action_logout) {
-		// find the active session which can only be facebook in my app
-	    Session session = Session.getActiveSession();
-	    // run the closeAndClearTokenInformation which does the following
-	    // DOCS : Closes the local in-memory Session object and clears any persistent 
-	    // cache related to the Session.
-	    session.closeAndClearTokenInformation();
-	    // return the user to the login screen
-	    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-	    // make sure the user can not access the page after he/she is logged out
-	    // clear the activity stack
-	    finish();
-		return true;
-	}
+   
+   
     return super.onOptionsItemSelected(item);
 }
 

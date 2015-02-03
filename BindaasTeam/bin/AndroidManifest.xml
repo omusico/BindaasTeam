@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wattabyte.bindaasteam"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.2" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -11,18 +11,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    
 
     <application
+        android:name="com.wattabyte.bindaasteam.BindaasApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
-        android:name="com.wattabyte.bindaasteam.BindaasApplication">
-          
-          <!-- This for Facebook login-->
-        <activity android:name="com.facebook.LoginActivity" >
-        </activity>
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.wattabyte.bindaasteam.MainActivity"
             android:label="@string/app_name" >
@@ -31,6 +26,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.SignUp" >
         </activity>
         <activity android:name="com.wattabyte.bindaasteam.navigationdrawer.NavigationDrawerActivity" >
         </activity>
@@ -44,11 +41,24 @@
         </activity>
         <activity android:name="com.wattabyte.bindaasteam.teammanagement.TeamName" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.teammanagement.Players"></activity>
-       <!-- This for Facebook Services-->
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+        <activity android:name="com.wattabyte.bindaasteam.teammanagement.Players" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.friends.AvailableUser" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.friends.ReplyActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.friends.RequestActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.friends.ResponseActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.FriendsListActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.GroupManagementActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.GroupNameActivity" >
+        </activity>
+        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.LeagueSelectActivity" >
+        </activity>
     </application>
 
 </manifest>

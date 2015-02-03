@@ -10,8 +10,8 @@ import com.parse.ParseUser;
 
 public class BindaasApplication extends Application {
 	public static final String VINAY = "msg";
-	private final static String YOUR_APPLICATION_ID = "AagOi8uLMB5wMZyK9xglRf7C1ftseZ9SZZX2ha7q";
-	private final static  String YOUR_CLIENT_KEY = "N4y3KV8VuFAFzva2PPO42IWgHXGhHnAEOb5rWdPL";
+	private final static String YOUR_APPLICATION_ID = "5Gnl5yYb2Q2TGqL8j0X8V1OurhCngQ8wO7BPRo4E";
+	private final static  String YOUR_CLIENT_KEY = "wibeIiRiFwiHoHPe1ayjcCC9KTqatzz73fCcyySc";
 	  
 	 @Override
 	  public void onCreate() {

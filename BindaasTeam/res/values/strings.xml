@@ -5,7 +5,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_logout">Logout</string>
-    <string name="facebook_app_id">823059121115438</string>
     <string name="action_friends">Add</string>
     <string name="app_contact_name">Bindaas Contacts</string>
     <string name="action_navigation">Bindaas Navigation</string>
@@ -17,6 +16,27 @@
     <string name="playerHint">set your name for bindaas team visibility</string>
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>
+    <string name="add_groups">Add Groups</string>
+    
+    <string name="username">UserName :</string>
+    <string name="password">Password :</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="email">Email :</string>
+    <string name="title_activity_request">RequestActivity</string>
+    <string name="message">Enter your message...........</string>
+    <string name="request">Send  Request</string>
+    <string name="title_activity_response">ResponseActivity</string>
+    <string name="title_activity_reply">ReplyActivity</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="group">Group Management</string>
+    <string name="title_activity_group_management">GroupManagementActivity</string>
+    <string name="groupName">Name Your Group</string>
+    <string name="next">Next</string>
+    <string name="title_activity_league_select">LeagueSelectActivity</string>
+    <string name="title_activity_friends_list">FriendsListActivity</string>
+    <string name="leagueName">LeagueName</string>
 
     <color name="red">#FF0000</color>
     <color name="blue">#0000FF</color>
@@ -34,7 +54,6 @@
     <string name="team_name">Name Your Team</string>
     <string name="mailId">Email-ID</string>
     <string name="location">Location</string>
-    <string name="next">Next</string>
     <string name="done">Done</string>
     <string name="playerGold">Gold</string>
     <string name="goldValue">110</string>

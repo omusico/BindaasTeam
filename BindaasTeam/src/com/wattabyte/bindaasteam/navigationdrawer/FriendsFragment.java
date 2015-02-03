@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.wattabyte.bindaasteam.R;
-import com.wattabyte.bindaasteam.contacts.ContactsActivity;
+import com.wattabyte.bindaasteam.friends.AvailableUser;
 
 
 public class FriendsFragment extends Fragment {
@@ -36,7 +36,7 @@ public class FriendsFragment extends Fragment {
 			public void onClick(View v) {
 				try {
 
-					intent = new Intent(NavigationDrawerActivity.getInstance(), ContactsActivity.class);
+					intent = new Intent(NavigationDrawerActivity.getInstance(), AvailableUser.class);
 
 					startActivity(intent);
 
