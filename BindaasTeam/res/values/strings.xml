@@ -17,7 +17,6 @@
     <string name="drawer_open"> Open Navigation Drawer </string>
     <string name="drawer_close"> Close Navigation Drawer </string>
     <string name="add_groups">Add Groups</string>
-    
     <string name="username">UserName :</string>
     <string name="password">Password :</string>
     <string name="signup">SignUp</string>
@@ -57,6 +56,8 @@
     <string name="done">Done</string>
     <string name="playerGold">Gold</string>
     <string name="goldValue">110</string>
-     <string name="playerRole">110</string>
+    <string name="playerRole">110</string>
+    <string name="title_activity_group_final">GroupFinalActivity</string>
+    <string name="title_activity_team_list_view">TeamListViewActivity</string>
 
 </resources>

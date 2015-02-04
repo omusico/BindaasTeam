@@ -13,13 +13,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name="com.wattabyte.bindaasteam.BindaasApplication"
+        android:name=".BindaasApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.wattabyte.bindaasteam.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,37 +27,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.SignUp" >
+        <activity android:name=".SignUp" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.navigationdrawer.NavigationDrawerActivity" >
+        <activity android:name=".navigationdrawer.NavigationDrawerActivity" >
         </activity>
         <activity
-            android:name="com.wattabyte.bindaasteam.contacts.ContactsActivity"
+            android:name=".contacts.ContactsActivity"
             android:label="@string/app_contact_name" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.teammanagement.SelectLeague" >
+        <activity android:name=".teammanagement.SelectLeague" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.teammanagement.SelectPlayers" >
+        <activity android:name=".teammanagement.SelectPlayers" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.teammanagement.TeamName" >
+        <activity android:name=".teammanagement.TeamName" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.teammanagement.Players" >
+        <activity android:name=".teammanagement.Players" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.friends.AvailableUser" >
+        <activity android:name=".friends.AvailableUser" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.friends.ReplyActivity" >
+        <activity android:name=".friends.ReplyActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.friends.RequestActivity" >
+        <activity android:name=".friends.RequestActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.friends.ResponseActivity" >
+        <activity android:name=".friends.ResponseActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.FriendsListActivity" >
+        <activity android:name=".groupmanagement.FriendsListActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.GroupManagementActivity" >
+        <activity android:name=".groupmanagement.GroupManagementActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.GroupNameActivity" >
+        <activity android:name=".groupmanagement.GroupNameActivity" >
         </activity>
-        <activity android:name="com.wattabyte.bindaasteam.groupmanagement.LeagueSelectActivity" >
+        <activity android:name=".groupmanagement.LeagueSelectActivity" >
+        </activity>
+        <activity
+            android:name=".groupmanagement.GroupFinalActivity"
+            android:label="@string/title_activity_group_final" >
+        </activity>
+        <activity
+            android:name="com.wattabyte.bindaasteam.teammanagement.TeamListViewActivity"
+            android:label="@string/title_activity_team_list_view" >
         </activity>
     </application>
 

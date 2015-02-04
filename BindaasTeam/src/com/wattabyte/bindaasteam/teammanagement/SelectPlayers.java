@@ -53,7 +53,7 @@ public class SelectPlayers extends ActionBarActivity {
 	ArrayList<HashMap<String, String>> playerRows;
 	ArrayList<String> list = new ArrayList<String>();
 	ListAdapter adapter;
-	static int count = 0;
+	int count = 0;
 	int gCount = 110;
 
 	// ArrayAdapter<String> adapter;
@@ -137,7 +137,7 @@ public class SelectPlayers extends ActionBarActivity {
 										.toString();
 								Log.d("MSG", "Obtaining GOld");
 								int i = Integer.parseInt(gold);
-								if (count < 2 && (gCount - i) > 0) {
+								if (count <= 2 && (gCount - i) > 0) {
 									count++;
 									Log.d("MSG", "1st If COndition");
 									gCount = gCount - i;
@@ -159,7 +159,7 @@ public class SelectPlayers extends ActionBarActivity {
 
 									}
 								}
-								if (count >= 2) {
+								if (count > 2) {
 									Toast.makeText(SelectPlayers.this, "Maximum Players Has Been Added", 
 											Toast.LENGTH_SHORT).show();
 									next.setVisibility(View.VISIBLE);

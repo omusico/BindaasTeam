@@ -5,7 +5,7 @@
     android:background="@color/blue">
 
     <TextView
-        android:id="@id/playerName"
+        android:id="@+id/playerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
