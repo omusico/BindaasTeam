@@ -1,4 +1,4 @@
-package com.wattabyte.bindaasteam.friends;
+package com.wattabyte.bindaasteam.notification;
 
 import android.content.Intent;
 import android.os.Bundle;

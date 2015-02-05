@@ -45,11 +45,9 @@
         </activity>
         <activity android:name=".friends.AvailableUser" >
         </activity>
-        <activity android:name=".friends.ReplyActivity" >
+        <activity android:name="com.wattabyte.bindaasteam.notification.ReplyActivity" >
         </activity>
-        <activity android:name=".friends.RequestActivity" >
-        </activity>
-        <activity android:name=".friends.ResponseActivity" >
+        <activity android:name="com.wattabyte.bindaasteam.friends.RequestActivity" >
         </activity>
         <activity android:name=".groupmanagement.FriendsListActivity" >
         </activity>

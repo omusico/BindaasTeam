@@ -36,6 +36,7 @@
     <string name="title_activity_league_select">LeagueSelectActivity</string>
     <string name="title_activity_friends_list">FriendsListActivity</string>
     <string name="leagueName">LeagueName</string>
+    
 
     <color name="red">#FF0000</color>
     <color name="blue">#0000FF</color>
@@ -59,5 +60,7 @@
     <string name="playerRole">110</string>
     <string name="title_activity_group_final">GroupFinalActivity</string>
     <string name="title_activity_team_list_view">TeamListViewActivity</string>
+    <string name="searchFreind">Type Your Friend Name</string>
+    <string name="searchFriendBtn">search</string>
 
 </resources>

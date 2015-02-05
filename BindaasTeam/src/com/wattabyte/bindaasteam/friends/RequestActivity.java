@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.wattabyte.bindaasteam.R;
+import com.wattabyte.bindaasteam.navigationdrawer.NavigationDrawerActivity;
 
 public class RequestActivity extends ActionBarActivity {
 	
@@ -59,7 +60,7 @@ public class RequestActivity extends ActionBarActivity {
 					request.put("RequestMessage",""+rMessage);
 					request.saveInBackground();
 					Toast.makeText(RequestActivity.this, "Successfully sent Request.....", Toast.LENGTH_SHORT).show();
-					Intent i = new Intent(RequestActivity.this, ResponseActivity.class);
+					Intent i = new Intent(RequestActivity.this, NavigationDrawerActivity.class);
 					startActivity(i);
 				}
 				else{

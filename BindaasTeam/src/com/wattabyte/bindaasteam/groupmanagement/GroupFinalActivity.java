@@ -19,23 +19,23 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.wattabyte.bindaasteam.R;
+import com.wattabyte.bindaasteam.util.BindaasUtil;
 
 public class GroupFinalActivity extends ActionBarActivity {
 	
 	public static final String GROUP_NAME = "GroupName";
 	public static final String LEAGUE_NAME = "LeagueName";
 	public static final String PLAYER_NAME = "PlayerName";
+	public static final String TEAM_MEMBER = "Name";
+	public static final String POINTS = "Points";
 	
 	ListView resultListView;
 	ListAdapter adapter;
 	ArrayList<HashMap<String, String>> resultList;
 	
-	
 	static String teamName;
-	public GroupFinalActivity() {
-		// TODO Auto-generated constructor stub
-	}
 	
 
 	@Override
@@ -58,12 +58,12 @@ public class GroupFinalActivity extends ActionBarActivity {
 				if(e == null){
 					Toast.makeText(GroupFinalActivity.this, "Groups Retrieved "+groups.size(), 
 							Toast.LENGTH_SHORT).show();
-					resultList = new ArrayList<HashMap<String, String>>();
-					HashMap<String, String> map;
+				
+					
 				for (ParseObject parseObject : groups) {
-					map = new  HashMap<String , String>();
-					map.put(PLAYER_NAME, parseObject.getString(PLAYER_NAME));
+					
 					Log.d("MSG", parseObject.getString(PLAYER_NAME));
+					
 					
 					ParseQuery<ParseObject> query2 = ParseQuery.getQuery("Team"+parseObject.getString(PLAYER_NAME));
 					
@@ -76,11 +76,41 @@ public class GroupFinalActivity extends ActionBarActivity {
 								Toast.makeText(GroupFinalActivity.this, "Groups Retrieved "+leagues.size(), 
 										Toast.LENGTH_SHORT).show();
 								
-								HashMap<String, String>	map2;
+								
 								for (ParseObject parseObject2 : leagues) {
-								map2 = new  HashMap<String , String>();
-								map2.put(GROUP_NAME, parseObject2.getString(GROUP_NAME));
-								Log.d(GROUP_NAME, map2.toString());
+									
+									ParseQuery<ParseObject> query3 = ParseQuery.getQuery(""+parseObject2.getString(GROUP_NAME));
+									query3.whereExists(TEAM_MEMBER);
+									query3.findInBackground(new FindCallback<ParseObject>() {
+										
+										@Override
+										public void done(List<ParseObject> teams, ParseException e3) {
+											if (e3 == null) {
+												Toast.makeText(GroupFinalActivity.this, "Groups Retrieved "+teams.size(), 
+														Toast.LENGTH_SHORT).show();
+												int j = 0;
+												
+												resultList = new ArrayList<HashMap<String, String>>();
+												
+												for (ParseObject parseObject3 : teams) {
+													
+													
+													Log.d("MSG",parseObject3.getClassName());
+													
+													Log.d("MSG",parseObject3.getString(POINTS));
+													j = j+Integer.parseInt(parseObject3.getString(POINTS));
+													Log.d("MSG",""+j);													
+													
+												}
+												 
+											} else {
+												Toast.makeText(GroupFinalActivity.this, "Groups UnRetrieved ", 
+														Toast.LENGTH_SHORT).show();
+											}
+											
+										}
+									});
+								
 								
 								}
 							} else {
@@ -90,11 +120,7 @@ public class GroupFinalActivity extends ActionBarActivity {
 						}
 					});
 					
-					resultList.add(map);
-					Log.d("MSG", resultList.toString());
-					adapter = new SimpleAdapter(GroupFinalActivity.this, resultList, R.layout.group_item, new String[]{PLAYER_NAME},
-							new int[]{R.id.groupName });
-					resultListView.setAdapter(adapter);
+					
 				}
 				}
 				else{
@@ -122,5 +148,9 @@ public class GroupFinalActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+
+	
+	
 	
 	}

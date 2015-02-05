@@ -29,6 +29,7 @@ import com.parse.ParseUser;
 import com.wattabyte.bindaasteam.R;
 import com.wattabyte.bindaasteam.groupmanagement.GroupFinalActivity;
 import com.wattabyte.bindaasteam.groupmanagement.GroupManagementActivity;
+import com.wattabyte.bindaasteam.groupmanagement.GroupNameActivity;
 
 public class GroupManagementFragment extends Fragment {
 	
@@ -54,7 +55,7 @@ public class GroupManagementFragment extends Fragment {
 			public void onClick(View v) {
 				try {
 
-					intent = new Intent(NavigationDrawerActivity.getInstance(), GroupManagementActivity.class);
+					intent = new Intent(NavigationDrawerActivity.getInstance(), GroupNameActivity.class);
 
 					startActivity(intent);
 
