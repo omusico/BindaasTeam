@@ -46,7 +46,8 @@
         <item>Friends</item>
         <item>Team Management</item>
         <item>Group Management</item>
-        <item>Notification</item>
+        <item>Friend Request</item>
+        <item>Group Request</item>
         <item>How to play</item>
     </string-array>
 
