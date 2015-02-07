@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -30,7 +32,7 @@ public class GroupFinalActivity extends ActionBarActivity {
 	public static final String PLAYER_NAME = "PlayerName";
 	public static final String TEAM_MEMBER = "Name";
 	public static final String POINTS = "Points";
-	
+	public static final String TEAM_CREATOR = "TeamCreator";
 	ListView resultListView;
 	ListAdapter adapter;
 	ArrayList<HashMap<String, String>> resultList;
@@ -78,40 +80,12 @@ public class GroupFinalActivity extends ActionBarActivity {
 								
 								
 								for (ParseObject parseObject2 : leagues) {
-									
-									ParseQuery<ParseObject> query3 = ParseQuery.getQuery(""+parseObject2.getString(GROUP_NAME));
-									query3.whereExists(TEAM_MEMBER);
-									query3.findInBackground(new FindCallback<ParseObject>() {
-										
-										@Override
-										public void done(List<ParseObject> teams, ParseException e3) {
-											if (e3 == null) {
-												Toast.makeText(GroupFinalActivity.this, "Groups Retrieved "+teams.size(), 
-														Toast.LENGTH_SHORT).show();
-												int j = 0;
-												
-												resultList = new ArrayList<HashMap<String, String>>();
-												
-												for (ParseObject parseObject3 : teams) {
-													
-													
-													Log.d("MSG",parseObject3.getClassName());
-													
-													Log.d("MSG",parseObject3.getString(POINTS));
-													j = j+Integer.parseInt(parseObject3.getString(POINTS));
-													Log.d("MSG",""+j);													
-													
-												}
-												 
-											} else {
-												Toast.makeText(GroupFinalActivity.this, "Groups UnRetrieved ", 
-														Toast.LENGTH_SHORT).show();
-											}
-											
-										}
-									});
-								
-								
+									SharedPreferences sharedPreferences = getSharedPreferences("final", Context.MODE_PRIVATE);
+									SharedPreferences.Editor editor = sharedPreferences.edit();
+									editor.putString(TEAM_CREATOR, parseObject2.getString(TEAM_CREATOR));
+									editor.putString(GROUP_NAME, parseObject2.getString(GROUP_NAME));
+									editor.putString(POINTS, parseObject2.getString(POINTS));
+									editor.commit();
 								}
 							} else {
 								Log.d("MSG", "Error: " + e2.getMessage());
@@ -119,7 +93,13 @@ public class GroupFinalActivity extends ActionBarActivity {
 							
 						}
 					});
-					
+					SharedPreferences sharedPreferences = getSharedPreferences("final", Context.MODE_PRIVATE);
+					String memberName = sharedPreferences.getString(TEAM_CREATOR, "");
+					Log.d("MSG", memberName);
+					String teamName = sharedPreferences.getString(GROUP_NAME,"");
+					Log.d("MSG", teamName);
+					String points = sharedPreferences.getString(POINTS, "");
+					Log.d("MSG", points);
 					
 				}
 				}

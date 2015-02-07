@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.parse.ParseObject;
+import com.parse.ParseUser;
 import com.wattabyte.bindaasteam.R;
 
 public class NavigationDrawerActivity extends ActionBarActivity implements
@@ -48,8 +51,9 @@ OnItemClickListener{
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.mainContent, fragment).commit();
 
-		
-		
+		ParseUser pUser = ParseUser.getCurrentUser();
+		Object o = pUser.getClass();
+		Log.d("MSG", o.toString());
 		instance = this;
 		setContentView(R.layout.activity_navigation);
 

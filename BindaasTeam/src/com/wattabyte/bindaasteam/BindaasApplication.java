@@ -32,7 +32,7 @@ public class BindaasApplication extends Application {
 	     Log.d(VINAY, "ParcelACL"); 
 	    // If you would like all objects to be private by default, remove this line.
 	    defaultACL.setPublicReadAccess(true);
-	    
+	    defaultACL.setPublicWriteAccess(true);
 	    ParseACL.setDefaultACL(defaultACL, true);
 	  }
 }
